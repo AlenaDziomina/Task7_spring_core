@@ -1,0 +1,37 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <context:component-scan base-package="com.grouk.horserace"/>
+
+    <util:properties id="config" location="classpath:config.properties"/>
+
+    <bean id="strings"
+          class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="strings"/>
+    </bean>
+
+    <util:list id="horseList">
+        <list>
+            <ref bean="domino"/>
+            <ref bean="onyx"/>
+            <ref bean="brandy"/>
+            <ref bean="fiona"/>
+            <ref bean="napoleon"/>
+            <ref bean="peter"/>
+            <ref bean="russell"/>
+            <ref bean="spirit"/>
+            <ref bean="pirate"/>
+            <ref bean="cash"/>
+        </list>
+    </util:list>
+
+    <bean id="race" scope="prototype" class="com.grouk.horserace.model.Race" factory-bean="raceService"
+          factory-method="getUpcomingRace">
+    </bean>
+
+    <import resource="horses-beans.xml"/>
+
+</beans>

@@ -1,0 +1,65 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <bean id="domino" class="com.grouk.horserace.model.Horse">
+        <property name="number" value="5"/>
+        <property name="name" value="Domino"/>
+        <property name="winCount" value="10"/>
+    </bean>
+
+    <bean id="onyx" class="com.grouk.horserace.model.Horse">
+        <property name="number" value="12"/>
+        <property name="name" value="Onyx"/>
+        <property name="winCount" value="3"/>
+    </bean>
+
+    <bean id="brandy" class="com.grouk.horserace.model.Horse">
+        <property name="number" value="33"/>
+        <property name="name" value="Brandy"/>
+        <property name="winCount" value="19"/>
+    </bean>
+
+    <bean id="fiona" class="com.grouk.horserace.model.Horse">
+        <property name="number" value="33"/>
+        <property name="name" value="Fiona"/>
+        <property name="winCount" value="19"/>
+    </bean>
+
+    <bean id="russell" class="com.grouk.horserace.model.Horse">
+        <property name="number" value="13"/>
+        <property name="name" value="Russell"/>
+        <property name="winCount" value="22"/>
+    </bean>
+
+    <bean id="peter" class="com.grouk.horserace.model.Horse">
+        <property name="number" value="24"/>
+        <property name="name" value="Peter"/>
+        <property name="winCount" value="3"/>
+    </bean>
+
+    <bean id="napoleon" class="com.grouk.horserace.model.Horse">
+        <property name="number" value="6"/>
+        <property name="name" value="Napoleon"/>
+        <property name="winCount" value="35"/>
+    </bean>
+
+    <bean id="spirit" class="com.grouk.horserace.model.Horse">
+        <property name="number" value="7"/>
+        <property name="name" value="Spirit"/>
+        <property name="winCount" value="17"/>
+    </bean>
+
+    <bean id="pirate" class="com.grouk.horserace.model.Horse">
+        <property name="number" value="9"/>
+        <property name="name" value="Pirate"/>
+        <property name="winCount" value="27"/>
+    </bean>
+
+    <bean id="cash" class="com.grouk.horserace.model.Horse">
+        <property name="number" value="55"/>
+        <property name="name" value="Cash"/>
+        <property name="winCount" value="41"/>
+    </bean>
+
+</beans>
